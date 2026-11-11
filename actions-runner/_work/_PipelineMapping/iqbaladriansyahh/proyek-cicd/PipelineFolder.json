@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "iqbaladriansyahh/proyek-cicd",
+  "pipelineDirectory": "proyek-cicd",
+  "workspaceDirectory": "proyek-cicd\\proyek-cicd",
+  "repositories": {
+    "iqbaladriansyahh/proyek-cicd": {
+      "repositoryPath": "proyek-cicd\\proyek-cicd",
+      "lastRunOn": "11/11/2026 12:14:28 +07:00"
+    }
+  },
+  "lastRunOn": "11/11/2026 12:14:28 +07:00"
+}
