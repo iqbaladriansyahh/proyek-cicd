@@ -61,13 +61,22 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy container
-        run: |
-          docker stop web-app || true
-          docker rm web-app || true
-          docker pull ghcr.io/${{ github.repository }}:latest
-          docker run -d --name web-app -p ${{ secrets.APP_PORT }}:80 ghcr.io/${{ github.repository }}:latest
+
+      - name: Stop old container
+        continue-on-error: true
+        run: docker stop web-app
+
+      - name: Remove old container
+        continue-on-error: true
+        run: docker rm web-app
+
+      - name: Pull latest image
+        run: docker pull ghcr.io/${{ github.repository }}:latest
+
+      - name: Run new container
+        run: docker run -d --name web-app -p ${{ secrets.APP_PORT }}:80 ghcr.io/${{ github.repository }}:latest
+
       - name: Health check
         run: |
-          sleep 3
-          curl -f http://localhost:${{ secrets.APP_PORT }} || exit 1
+          Start-Sleep -Seconds 3
+          curl.exe -f http://localhost:${{ secrets.APP_PORT }}
