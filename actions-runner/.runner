@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 21,
+  "agentName": "HALOW",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus12.actions.githubusercontent.com/EL1gyO1JWZrOqcVfvMZ6oFNdX2k7KYiauqunkuwLd3L29DPryk/",
+  "gitHubUrl": "https://github.com/iqbaladriansyahh/proyek-cicd",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
